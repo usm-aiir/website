@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "Brain",
+    "title": "Artificial Intelligence",
+    "description": "Advanced machine learning algorithms, neural networks, and AI system development"
+  },
+  {
+    "icon": "Search",
+    "title": "Information Retrieval",
+    "description": "Search algorithms, data mining, and knowledge extraction from large datasets"
+  },
+  {
+    "icon": "Users",
+    "title": "Human-AI Interaction",
+    "description": "Designing intuitive interfaces and improving human-computer collaboration"
+  }
+]
+

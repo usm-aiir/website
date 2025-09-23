@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Survey of Abstract Meaning Representation: Then, Now, Future",
+    "authors": ["B. Mansouri"],
+    "venue": "TBD",
+    "year": 2025,
+    "abstract": "This comprehensive survey examines the evolution of Abstract Meaning Representation (AMR) from its inception to current applications and future research directions in natural language processing and understanding.",
+    "doi": "#",
+    "pdfUrl": "#"
+  },
+  {
+    "title": "Temporal Aspects of CLIP Embeddings",
+    "authors": ["N. Largey", "M. Ho", "J. Ahrndt", "B. Mansouri"],
+    "venue": "Tempweb@WWW",
+    "year": 2025,
+    "abstract": "This work investigates the temporal characteristics of CLIP embeddings, analyzing how these multimodal representations capture and evolve over time-sensitive visual and textual content.",
+    "doi": "#",
+    "pdfUrl": "#"
+  },
+  {
+    "title": "Analyzing the Influence of the Pandemic on Seasonal Queries",
+    "authors": ["M. Ho", "N. Largey", "B. Mansouri"],
+    "venue": "Tempweb@WWW",
+    "year": 2025,
+    "abstract": "We analyze how the COVID-19 pandemic affected seasonal search query patterns, examining shifts in user behavior and information needs during this unprecedented global event.",
+    "doi": "#",
+    "pdfUrl": "#"
+  },
+  {
+    "title": "Mathematical Information Retrieval: Search and Question Answering",
+    "authors": ["R. Zanibbi", "B. Mansouri", "A. Agarwal"],
+    "venue": "Foundations and Trends® in Information Retrieval",
+    "year": 2025,
+    "abstract": "This comprehensive survey examines the evolution of mathematical information retrieval from traditional symbolic approaches to modern neural methods. We analyze current challenges, datasets, evaluation metrics, and future research directions in the field of mathematical search and understanding.",
+    "doi": "#",
+    "pdfUrl": "#"
+  },
+  {
+    "title": "AIIR Lab Systems for CLEF 2024 SimpleText: Large Language Models for Text Simplification",
+    "authors": ["N. Largey", "R. Maarefdoust", "S. Durgin", "B. Mansouri"],
+    "venue": "CLEF",
+    "year": 2024,
+    "abstract": "This paper presents the AIIR Lab's systems for the CLEF 2024 SimpleText track, focusing on the use of large language models for automatic text simplification of scientific literature.",
+    "doi": "#",
+    "pdfUrl": "#"
+  },
+  {
+    "title": "CrossMath: Towards Cross-lingual Math Information Retrieval",
+    "authors": ["J. Gore", "J. Polletta", "B. Mansouri"],
+    "venue": "ICTIR",
+    "year": 2024,
+    "abstract": "We present CrossMath, a system for cross-lingual mathematical information retrieval that enables users to search for mathematical content across different languages while preserving the semantic meaning of mathematical expressions.",
+    "doi": "#",
+    "pdfUrl": "#"
+  },
+  {
+    "title": "Using Large Language Models for Math Information Retrieval",
+    "authors": ["B. Mansouri", "R. Maarefdoust"],
+    "venue": "SIGIR",
+    "year": 2024,
+    "abstract": "This work explores the application of large language models to mathematical information retrieval tasks, investigating how modern NLP techniques can improve the search and understanding of mathematical content.",
+    "doi": "#",
+    "pdfUrl": "#"
+  },
+  {
+    "title": "MathMex: Search Engine for Math Definitions",
+    "authors": ["S. Durgin", "J. Gore", "B. Mansouri"],
+    "venue": "ECIR",
+    "year": 2024,
+    "abstract": "MathMex is a conversational math search engine developed at the University of Southern Maine. Named after Vannevar Bush's hypothetical Memex system, it provides an open-source platform for searching mathematical definitions extracted from various data sources including text, images, and videos. The system supports text, formula, and combined queries with advanced logging features.",
+    "doi": "10.1007/978-3-031-56027-9_15",
+    "pdfUrl": "https://link.springer.com/chapter/10.1007/978-3-031-56027-9_15"
+  },
+  {
+    "title": "AIIR and LIAAD Labs Systems for CLEF 2023 SimpleText",
+    "authors": ["B. Mansouri", "S. Durgin", "S. Franklin", "S. Fletcher", "R. Campos"],
+    "venue": "CLEF",
+    "year": 2023,
+    "abstract": "This paper presents the systems developed by AIIR and LIAAD labs for the CLEF 2023 SimpleText track, focusing on text simplification and automatic summarization for scientific literature.",
+    "doi": "#",
+    "pdfUrl": "#"
+  },
+  {
+    "title": "FALQU: Finding Answers to Legal Questions",
+    "authors": ["B. Mansouri", "R. Campos"],
+    "venue": "arXiv",
+    "year": 2023,
+    "abstract": "FALQU is a system designed for finding answers to legal questions by leveraging advanced information retrieval and natural language processing techniques to search through legal document collections.",
+    "doi": "10.48550/arXiv.2304.05611",
+    "pdfUrl": "https://arxiv.org/abs/2304.05611"
+  },
+  {
+    "title": "Towards Timeline Generation with Abstract Meaning Representation",
+    "authors": ["B. Mansouri", "R. Campos", "A. Jatowt"],
+    "venue": "WWW",
+    "year": 2023,
+    "abstract": "We propose a novel approach for timeline generation using Abstract Meaning Representation (AMR) to better capture semantic relationships in temporal event sequences and improve the quality of automatically generated timelines.",
+    "doi": "#",
+    "pdfUrl": "#"
+  },
+  {
+    "title": "Clarifying Questions in Math Information Retrieval",
+    "authors": ["B. Mansouri", "Z. JahediBashiz"],
+    "venue": "ICTIR",
+    "year": 2023,
+    "abstract": "This work investigates the problem of query disambiguation in mathematical search engines through the use of clarifying questions. Our study analyzes user search patterns and proposes methods for better understanding and clarifying ambiguous mathematical queries.",
+    "doi": "#",
+    "pdfUrl": "#"
+  }
+]

@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Base palette around #9000ff */
+  --white: #ffffff;
+  --black: #1a1a1a;
+  --purple: #9000ff;
+  --purple-light: #b333ff;
+  --purple-dark: #6600cc;
+  --gray-light: #f5f5f5;
+  --gray-medium: #737373;
+  --gray-border: #e5e5e5;
+  --red: #dc2626;
+  --red-light: #fef2f2;
+  
+  /* Chart colors */
+  --chart-1: #f59e0b;
+  --chart-2: #10b981;
+  --chart-3: #3b82f6;
+  --chart-4: #84cc16;
+  --chart-5: #f97316;
+  
+  /* Radius */
+  --radius: 0.625rem;
+  
+  /* Semantic mappings - everything references the base colors */
+  --background: var(--white);
+  --foreground: var(--black);
+  --primary: var(--purple);
+  --primary-foreground: var(--white);
+  --secondary: var(--gray-light);
+  --secondary-foreground: var(--black);
+  --muted: var(--gray-light);
+  --muted-foreground: var(--gray-medium);
+  --accent: var(--purple-light);
+  --accent-foreground: var(--white);
+  --destructive: var(--red);
+  --destructive-foreground: var(--red-light);
+  --border: var(--gray-border);
+  --input: var(--gray-border);
+  --ring: var(--purple);
+  --card: var(--white);
+  --card-foreground: var(--black);
+  --popover: var(--white);
+  --popover-foreground: var(--black);
+  --sidebar: var(--white);
+  --sidebar-foreground: var(--black);
+  --sidebar-primary: var(--purple);
+  --sidebar-primary-foreground: var(--white);
+  --sidebar-accent: var(--gray-light);
+  --sidebar-accent-foreground: var(--black);
+  --sidebar-border: var(--gray-border);
+  --sidebar-ring: var(--purple);
+}
+
+.dark {
+  /* Dark theme - override base colors only */
+  --white: #1a1a1a;
+  --black: #fafafa;
+  --gray-light: #3a3a3a;
+  --gray-medium: #a3a3a3;
+  --gray-border: #3a3a3a;
+  --purple: #b333ff;
+  --purple-light: #d966ff;
+  --purple-dark: #9000ff;
+  
+  /* Dark theme chart colors */
+  --chart-1: #8b5cf6;
+  --chart-2: #06d6a0;
+  --chart-3: #f97316;
+  --chart-4: #d946ef;
+  --chart-5: #ef4444;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles using the #9000ff palette */
+.gradient-text {
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-glow {
+  background: radial-gradient(circle at center, color-mix(in srgb, var(--purple) 10%, transparent) 0%, transparent 70%);
+}

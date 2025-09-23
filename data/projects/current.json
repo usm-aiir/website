@@ -1,0 +1,18 @@
+[
+  {
+    "title": "MathMex",
+    "description": "MathMex is a conversational math search engine developed at USM, named after Vannevar Bush's hypothetical Memex system. Started in 2023 with MEIF funding and now supported by NSF, it's an open-source search engine for mathematical definitions from text, images, and videos. Users can search using text, formulas, or combined queries. Try it live at mathmex.com",
+    "duration": "2023-2026",
+    "team": ["Dr. Behrooz Mansouri", "Owen Leitzell", "Aubin Mugisha", "Nathaniel Serrano"],
+    "githubUrl": "https://github.com/usm-aiir/mathmex",
+    "paperUrl": "#"
+  },
+  {
+    "title": "Application of AI in the Fine Arts",
+    "description": "Throughout history, art has served as a powerful mirror reflecting the evolving tapestry of human thought, emotions, and experiences. From abstract symbols to detailed narratives, artists have captured and reinterpreted concepts central to our understanding of the world. This research proposes a novel approach to explore this dynamic relationship by investigating how artistic portrayals of key concepts have changed across cultures and historical periods.",
+    "duration": "2025",
+    "team": ["Dr. Behrooz Mansouri", "Clayton Durepos"],
+    "githubUrl": "",
+    "paperUrl": "#"
+  }
+]

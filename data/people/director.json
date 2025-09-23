@@ -1,0 +1,13 @@
+{
+  "name": "Dr. Behrooz Mansouri",
+  "title": "Lab Director & Associate Professor",
+  "image": "/images/director/behroozMansouri.jpg",
+  "email": "behrooz.mansouri@maine.edu",
+  "bio": "Dr. Mansouri leads the AIIR Lab with expertise in artificial intelligence, machine learning, and information retrieval systems. His research focuses on developing innovative AI solutions for conversational mathematics and mathematical information retreival.",
+  "interests": [
+    "Machine Learning",
+    "Information Retrieval", 
+    "Natural Language Processing",
+    "Data Mining"
+  ]
+}

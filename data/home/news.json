@@ -1,0 +1,21 @@
+[
+  {
+    "date": "Sep 18th, 2025",
+    "title": "Award at CLEF 2025",
+    "description": "The AIIR Lab Team was selected as Best of Lab in the SimpleText track at CLEF 2025.",
+    "badge": "Awards"
+  },
+  {
+    "date": "Sep 11th, 2025",
+    "title": "Paper accepted at SIGIR-AP 2025",
+    "description": "Our work on query rewriting with LLMs, for math search, has been accepted for publication at SIGIR-AP 2025.",
+    "badge": "Publication"
+  },
+  {
+    "date": "Aug 28th, 2025",
+    "title": "Another Year of MathMex",
+    "description": "As the summer of 2025 came to an end, the AIIR Lab Version 2 of MathMex, our flagship project, supported by a grant from the NSF.",
+    "badge": "Project"
+  }
+]
+

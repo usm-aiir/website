@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Mandy Ho",
+    "level": "Undergraduate Student",
+    "year": "4th Year",
+    "image": "/images/students/mandyHo.jpg",
+    "email": "mandy.ho@maine.edu",
+    "bio": "Mandy is a senior at USM majoring in Computer Science. She joined the AIIR lab in the Spring of 2025, conducting research on query disambiguation in mathematical search. This fall, she is exploring brain activity during information-seeking behaviors using EEG devices, focusing on reviewing existing tools and datasets while developing pipelines for reading and processing EEG signals."
+  },
+  {
+    "name": "Clayton Durepos",
+    "level": "Undergraduate Student",
+    "year": "3rd Year",
+    "image": "/images/students/claytonDurepos.jpg",
+    "email": "clayton.durepos@maine.edu",
+    "bio": "Clayton is a junior at USM majoring in Computer Science. He joined the AIIR lab in the Spring of 2025, conducting research on sentiment classification in the domain of fine arts. Since then, he has served as a full-stack developer for MathMex, and is now coordinating the research efforts of the lab."  }
+]
