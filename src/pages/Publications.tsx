@@ -3,15 +3,12 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, FileText, Calendar, Users, Search } from "lucide-react"
-import Link from "next/link"
-import { loadPublications, getPublicationsByYear, getPublicationYears } from "@/lib/utils"
+import { ExternalLink, FileText, Calendar, Users } from "lucide-react"
+import { Link } from "react-router-dom"
+import { loadPublications } from "@/lib/utils"
 
 export default function PublicationsPage() {
   const publications = loadPublications()
-
-  const publicationsByYear = getPublicationsByYear(publications)
-  const years = getPublicationYears(publications)
 
   return (
     <div className="min-h-screen bg-background">
@@ -47,7 +44,8 @@ export default function PublicationsPage() {
                             <Calendar className="h-4 w-4" />
                             <span>{publication.year}</span>
                           </div>
-                          <Badge variant="outline">{publication.venue}</Badge>                        </div>
+                          <Badge variant="outline">{publication.venue}</Badge>
+                        </div>
                       </div>
                     </div>
                   </CardHeader>
@@ -56,16 +54,16 @@ export default function PublicationsPage() {
 
                     <div className="flex flex-wrap gap-2">
                       <Button size="sm" variant="outline" asChild>
-                        <Link href={publication.pdfUrl  || "#"}>
+                        <Link to={publication.pdfUrl || "#"}>
                           <FileText className="h-4 w-4 mr-2" />
                           PDF
                         </Link>
                       </Button>
                       <Button size="sm" variant="outline" asChild>
-                        <Link href={`https://doi.org/${publication.doi}`} target="_blank">
+                        <a href={`https://doi.org/${publication.doi}`} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4 mr-2" />
                           DOI
-                        </Link>
+                        </a>
                       </Button>
                     </div>
                   </CardContent>

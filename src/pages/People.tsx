@@ -3,15 +3,13 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Mail, GraduationCap } from "lucide-react"
-import Link from "next/link"
+import { Link } from "react-router-dom"
 import { loadDirector, loadCurrentStudents, loadAlumni } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 export default function PeoplePage() {
   const director = loadDirector()
-
   const currentStudents = loadCurrentStudents()
-
   const alumni = loadAlumni()
 
   return (
@@ -42,7 +40,7 @@ export default function PeoplePage() {
                     />
                     <div className="space-y-2">
                       <Link
-                        href={`mailto:${director.email}`}
+                        to={`mailto:${director.email}`}
                         className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
                         <Mail className="h-4 w-4 mr-2" />
@@ -57,7 +55,7 @@ export default function PeoplePage() {
                     <div>
                       <h4 className="font-semibold mb-3">Research Interests</h4>
                       <div className="flex flex-wrap gap-2">
-                        {director.interests.map((interest, index) => (
+                        {director.interests.map((interest: string, index: number) => (
                           <Badge key={index} variant="secondary">
                             {interest}
                           </Badge>
@@ -97,7 +95,7 @@ export default function PeoplePage() {
                         </div>
                       )}
                       <Link
-                        href={`mailto:${student.email}`}
+                        to={`mailto:${student.email}`}
                         className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
                         <Mail className="h-4 w-4 mr-2" />
@@ -137,23 +135,23 @@ export default function PeoplePage() {
 
       {/* Call to Action */}
       <section className="mt-20 text-center">
-            <Card className="bg-primary/5 border-primary/20">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Interested in Joining?</h3>
-                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
-                  We're always looking for new opportunities. If you're interested in collaborating with us, or joining our team, we'd love to hear from you.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" asChild>
-                    <Link href="/people">Contact Our Team</Link>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild>
-                    <Link href="/publications">View Publications</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </section>
+        <Card className="bg-primary/5 border-primary/20">
+          <CardContent className="p-8">
+            <h3 className="text-2xl font-bold mb-4">Interested in Joining?</h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
+              We're always looking for new opportunities. If you're interested in collaborating with us, or joining our team, we'd love to hear from you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild>
+                <Link to="/people">Contact Our Team</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/publications">View Publications</Link>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
 
       <Footer />
     </div>

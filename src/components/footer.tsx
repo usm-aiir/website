@@ -1,5 +1,4 @@
-import Link from "next/link"
-import Image from "next/image"
+import { Link } from "react-router-dom"
 
 export function Footer() {
   return (
@@ -8,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3">
-              <Image src="/images/Logo_NoBack_White.png" alt="AIIR Lab Logo" width={80} height={40} />
+              <img src="/images/Logo_NoBack_White.png" alt="AIIR Lab Logo" width={80} height={40} />
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4 ml-2">
               The Artificial Intelligence and Information Retrieval Laboratory at the University of Southern Maine is dedicated
@@ -22,19 +21,19 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
               <Link
-                href="/people"
+                to="/people"
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 People
               </Link>
               <Link
-                href="/projects"
+                to="/projects"
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Projects
               </Link>
               <Link
-                href="/publications"
+                to="/publications"
                 className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Publications
@@ -47,9 +46,9 @@ export function Footer() {
               <p>University of Southern Maine</p>
               <p>Science Building</p>
               <p>Portland, ME 04104</p>
-              <Link href="mailto:behrooz.mansouri@maine.edu" className="block hover:text-foreground transition-colors">
+              <a href="mailto:behrooz.mansouri@maine.edu" className="block hover:text-foreground transition-colors">
                 behrooz.mansouri@maine.edu
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,16 +1,13 @@
-"use client"
-
-import Link from "next/link"
-import Image from "next/image"
+import { Link, useLocation } from "react-router-dom"
 import { useState } from "react"
-import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const pathname = usePathname()
+  const location = useLocation()
+  const pathname = location.pathname
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -30,8 +27,8 @@ export function Header() {
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-            <Image src="/images/Logo_NoBack_Purple.png" alt="AIIR Lab Logo" width={80} height={40} className="rounded-lg" />
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+            <img src="/images/Logo_NoBack_Purple.png" alt="AIIR Lab Logo" width={80} height={40} className="rounded-lg" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -39,7 +36,7 @@ export function Header() {
             {navItems.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                to={item.href}
                 className={cn(
                   "text-muted-foreground hover:text-foreground transition-colors duration-200 relative",
                   isActive(item.href) && "text-foreground font-medium",
@@ -66,7 +63,7 @@ export function Header() {
               {navItems.map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  to={item.href}
                   className={cn(
                     "block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-md",
                     isActive(item.href) && "text-foreground bg-primary/10 font-medium",

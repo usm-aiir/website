@@ -3,14 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github, Calendar, Users } from "lucide-react"
-import Link from "next/link"
+import { Link } from "react-router-dom"
 import { Footer } from "@/components/footer"
-import { loadCurrentProjects, loadCompletedProjects } from "@/lib/utils"
+import { loadCurrentProjects } from "@/lib/utils"
 
 export default function ProjectsPage() {
   const currentProjects = loadCurrentProjects()
-  const completedProjects = loadCompletedProjects()
-
 
   return (
     <div className="min-h-screen bg-background">
@@ -63,13 +61,13 @@ export default function ProjectsPage() {
 
                       <div className="flex gap-2 pt-2">
                         <Button size="sm" variant="outline" asChild>
-                          <Link href={project.githubUrl || "#"}>
+                          <Link to={project.githubUrl || "#"}>
                             <Github className="h-4 w-4 mr-2" />
                             Code
                           </Link>
                         </Button>
                         <Button size="sm" variant="outline" asChild>
-                          <Link href={project.paperUrl  || "#"}>
+                          <Link to={project.paperUrl || "#"}>
                             <ExternalLink className="h-4 w-4 mr-2" />
                             Papers
                           </Link>
@@ -81,58 +79,6 @@ export default function ProjectsPage() {
               ))}
             </div>
           </section>
-
-          {/* Completed Projects */}
-          {/* <section>
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold">Completed Projects</h2>
-              <Badge variant="outline" className="text-sm">
-                {completedProjects.length} Completed
-              </Badge>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {completedProjects.map((project, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-lg text-balance">{project.title}</CardTitle>
-                    <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4" />
-                      {project.duration}
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
-
-                    <div className="space-y-3">
-                      <div>
-                        <h4 className="font-medium text-sm mb-1">Outcome</h4>
-                        <p className="text-sm text-muted-foreground">{project.outcome}</p>
-                      </div>
-
-                      <div>
-                        <h4 className="font-medium text-sm mb-2">Team</h4>
-                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                          <Users className="h-4 w-4" />
-                          <span>{project.team.join(", ")}</span>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-medium text-sm mb-2">Technologies</h4>
-                        <div className="flex flex-wrap gap-1">
-                          {project.technologies.map((tech, techIndex) => (
-                            <Badge key={techIndex} variant="secondary" className="text-xs">
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section> */}
         </div>
       </div>
 

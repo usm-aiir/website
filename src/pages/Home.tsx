@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Brain, Search, Users } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
+import { Link } from "react-router-dom"
 import { loadResearchAreas, loadRecentNews } from "@/lib/utils"
 
 export default function HomePage() {
@@ -45,12 +44,12 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="/projects">
+                <Link to="/projects">
                   Explore Our Research <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="/people">Meet Our Team</Link>
+                <Link to="/people">Meet Our Team</Link>
               </Button>
             </div>
           </div>
