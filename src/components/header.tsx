@@ -28,7 +28,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-            <img src="./images/Logo_NoBack_Purple.png" alt="AIIR Lab Logo" width={80} height={40} className="rounded-lg" />
+            <img src={`${import.meta.env.BASE_URL}images/Logo_NoBack_Purple.png`} alt="AIIR Lab Logo" width={80} height={40} className="rounded-lg" />
           </Link>
 
           {/* Desktop Navigation */}

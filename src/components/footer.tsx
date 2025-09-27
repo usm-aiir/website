@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3">
-              <img src="./images/Logo_NoBack_White.png" alt="AIIR Lab Logo" width={80} height={40} />
+              <img src={`${import.meta.env.BASE_URL}images/Logo_NoBack_White.png`} alt="AIIR Lab Logo" width={80} height={40} />
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4 ml-2">
               The Artificial Intelligence and Information Retrieval Laboratory at the University of Southern Maine is dedicated
