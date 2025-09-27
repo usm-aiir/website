@@ -7,7 +7,7 @@ import { ExternalLink, FileText, Calendar, Users } from "lucide-react"
 import { Link } from "react-router-dom"
 import { loadPublications } from "@/lib/utils"
 
-export default function PublicationsPage() {
+export default function Publications() {
   const publications = loadPublications()
 
   return (

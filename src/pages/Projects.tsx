@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 import { Footer } from "@/components/footer"
 import { loadCurrentProjects } from "@/lib/utils"
 
-export default function ProjectsPage() {
+export default function Projects() {
   const currentProjects = loadCurrentProjects()
 
   return (

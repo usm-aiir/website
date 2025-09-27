@@ -6,7 +6,7 @@ import Publications from './pages/Publications'
 
 function App() {
   return (
-    <Router basename="/~behrooz.mansouri/aiir/dist">
+    <Router basename="/aiir">
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/people" element={<People />} />

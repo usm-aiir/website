@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 import { loadDirector, loadCurrentStudents, loadAlumni } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
-export default function PeoplePage() {
+export default function People() {
   const director = loadDirector()
   const currentStudents = loadCurrentStudents()
   const alumni = loadAlumni()

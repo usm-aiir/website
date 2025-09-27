@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => ({
-  base: mode === 'production' ? '/~behrooz.mansouri/aiir/dist/' : '/',
+  base: mode === 'production' ? '/aiir/' : '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

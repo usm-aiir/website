@@ -7,7 +7,7 @@ import { ArrowRight, Brain, Search, Users } from "lucide-react"
 import { Link } from "react-router-dom"
 import { loadResearchAreas, loadRecentNews } from "@/lib/utils"
 
-export default function HomePage() {
+export default function Home() {
   const researchAreasData = loadResearchAreas()
   const recentNews = loadRecentNews()
 
