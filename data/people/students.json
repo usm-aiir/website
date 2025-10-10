@@ -29,5 +29,13 @@
   "image": "/images/students/aubinmugisha.jpg",
   "email": "aubin.mugisha@maine.edu",
   "bio": "Aubin is a senior at USM majoring in Computer Science. He joined the AIIR Lab in the summer of 2025, conducting research on math text and formula simplification. His current work focuses on developing models that detect complex mathematical texts and simplify them into clear, accessible expressions for non-experts."
+},
+{
+  "name": "Mathieu Poulin",
+  "level": "Undergraduate Student",
+  "year": "3rd Year",
+  "image": ".jpg",
+  "email": "mathieu.poulin@maine.edu",
+  "bio": "Mathieu is a junior at USM, majoring in Computer Science. He joined the AIIR Lab in the fall of 2025, conducting research on formula search in images." 
 }
 ]
