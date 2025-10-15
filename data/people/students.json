@@ -37,5 +37,13 @@
   "image": "/images/students/ellaHawkins.jpg",
   "email": "ella.hawkins@maine.edu",
   "bio": "Ella is a sophomore at USM majoring in Computer Science. She joined the AIIR lab in the Fall of 2025, conducting research on query suggestion for mathematical search."
+},
+{
+  "name": "Lucas Matheson",
+  "level": "Undergraduate Student",
+  "year": "2nd Year",
+  "image": "/images/students/lucasMatheson.jpg",
+  "email": "lucas.matheson@maine.edu",
+  "bio": "Lucas is a senior at USM majoring in Computer Science. He joined the AIIR lab in the Fall of 2025, conducting research on math text and formula searching. His current work is focused on developing fusion models to combine text and formula information for improved search results."
 }
 ]
