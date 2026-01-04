@@ -153,3 +153,9 @@
 .hero-glow {
   background: radial-gradient(circle at center, color-mix(in srgb, var(--purple) 10%, transparent) 0%, transparent 70%);
 }
+
+.grid-pattern {
+  background-image: linear-gradient(rgba(217, 217, 217, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217, 217, 217, 0.18) 1px, transparent 1px);
+  background-size: 50px 50px;
+}

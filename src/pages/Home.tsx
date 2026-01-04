@@ -29,15 +29,16 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative mt-10 pt-24 pb-16 overflow-hidden">
+	<div className="absolute inset-0 grid-pattern"></div>
         <div className="absolute inset-0 hero-glow"></div>
         <div className="max-w-7xl my-20 mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-6xl mx-auto">
-            <h1 className="text-2xl md:text-4xl font-bold text-balance">
-              University of Southern Maine's
-            </h1>
             <h1 className="text-2xl md:text-4xl font-bold mb-6 text-balance">
-              <span className="gradient-text">Artificial Intelligence and Information Retrieval Laboratory</span>
+              The <span className="gradient-text">Artificial Intelligence</span> and <span className="gradient-text">Information Retrieval</span> Laboratory
             </h1>
+	    <h1 className="text-2xl md:text-3xl font-bold mb-6 text-balance">
+		at the University of Southern Maine
+	    </h1>
             <p className="text-xl text-muted-foreground mb-8 text-pretty max-w-3xl mx-auto leading-relaxed">
               Maine's first Information Retrieval Laboratory, pioneering AI research and innovative solutions 
               at the University of Southern Maine.
