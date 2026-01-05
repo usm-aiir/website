@@ -11,16 +11,18 @@ import {
   ChevronRight, 
   ChevronLeft,
   CheckCircle2,
-  ExternalLink
+  ExternalLink,
+  PenLine
 } from "lucide-react"
 
 const GOOGLE_FORM_URL = import.meta.env.VITE_GOOGLE_FORM_URL || ""
 
 const steps = [
-  { id: 1, title: "Time Tracking", icon: Clock },
+  { id: 1, title: "Logging Hours", icon: Clock },
   { id: 2, title: "Lab Presence", icon: MapPin },
-  { id: 3, title: "GitHub Repository", icon: Github },
-  { id: 4, title: "Complete Setup", icon: UserCheck },
+  { id: 3, title: "Codebase", icon: Github },
+  { id: 4, title: "Writing", icon: PenLine },
+  { id: 5, title: "Getting Started", icon: UserCheck },
 ]
 
 export default function Onboarding() {
@@ -113,7 +115,7 @@ export default function Onboarding() {
       {/* Content Sections */}
       <section className="py-8 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Step 1: Time Tracking */}
+          {/* Step 1: Logging Hours */}
           {currentStep === 1 && (
             <Card className="border-0 bg-card/80 backdrop-blur-sm shadow-xl animate-in fade-in slide-in-from-right-4 duration-300">
               <CardContent className="p-8">
@@ -122,14 +124,14 @@ export default function Onboarding() {
                     <Clock className="h-8 w-8 text-primary" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold">Submitting Your Time</h2>
+                    <h2 className="text-2xl font-bold">Logging Hours</h2>
                     <p className="text-muted-foreground">How to accurately track and report your work hours</p>
                   </div>
                 </div>
                 
                 <div className="space-y-6 text-foreground/90">
                   <p className="leading-relaxed">
-                    Accurate time tracking is essential for funded research projects. 
+                    Accurate time tracking is essential to comply with University standards. 
                     Here's what you need to know:
                   </p>
                   
@@ -137,10 +139,10 @@ export default function Onboarding() {
                     <div className="flex gap-4 p-4 rounded-lg bg-muted/50">
                       <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">1</div>
                       <div>
-                        <h3 className="font-semibold mb-1">Weekly Time Sheets</h3>
+                        <h3 className="font-semibold mb-1">Daily Submission</h3>
                         <p className="text-sm text-muted-foreground">
-                          Submit your time sheet every Friday by 10:00 PM. Include all hours spent on lab projects, 
-                          meetings, and research activities.
+                          Submit your logged hours at the end of each day. This ensures accurate tracking 
+                          and makes compliance much easier.
                         </p>
                       </div>
                     </div>
@@ -148,10 +150,20 @@ export default function Onboarding() {
                     <div className="flex gap-4 p-4 rounded-lg bg-muted/50">
                       <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">2</div>
                       <div>
-                        <h3 className="font-semibold mb-1">Be Specific</h3>
+                        <h3 className="font-semibold mb-1">Friday Deadline</h3>
                         <p className="text-sm text-muted-foreground">
-                          Include brief descriptions of what you worked on. This helps with project reporting 
-                          and ensures your contributions are properly documented.
+                          At the very latest, all times must be entered and submitted by <strong>noon every Friday</strong>. 
+                          No exceptions.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-4 p-4 rounded-lg bg-muted/50">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">3</div>
+                      <div>
+                        <h3 className="font-semibold mb-1">No Weekend Hours</h3>
+                        <p className="text-sm text-muted-foreground">
+                          There should be no hours logged on weekend days (Saturday or Sunday).
                         </p>
                       </div>
                     </div>
@@ -159,7 +171,7 @@ export default function Onboarding() {
                   
                   <div className="p-4 rounded-lg border-l-4 border-primary bg-primary/5">
                     <p className="text-sm font-medium">
-                      Track your time as you work rather than trying to remember at the end of the week. 
+                      Log your time at the end of each work session rather than trying to remember at the end of the week. 
                       It's more accurate and takes less time overall!
                     </p>
                   </div>
@@ -183,28 +195,29 @@ export default function Onboarding() {
                     <MapPin className="h-8 w-8 text-primary" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold">Physical Presence in the Lab</h2>
+                    <h2 className="text-2xl font-bold">Physical Presence</h2>
                     <p className="text-muted-foreground">Building community through regular in-person collaboration</p>
                   </div>
                 </div>
                 
                 <div className="space-y-6 text-foreground/90">
                   <p className="leading-relaxed">
-                    While we embrace flexible work arrangements, regular physical presence in the lab is crucial 
-                    for building relationships, fostering collaboration, and accelerating your research.
+                    We strive to be flexible with scheduling, but maintaining a physical presence in the lab 
+                    is a <strong>strict requirement</strong>. Regular in-person time is crucial for building relationships, 
+                    fostering collaboration, and accelerating your research.
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="p-5 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
-                      <h3 className="font-bold text-lg mb-3 text-primary">Minimum Expectations</h3>
+                      <h3 className="font-bold text-lg mb-3 text-primary">Minimum Expectation</h3>
                       <ul className="space-y-2 text-sm">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span>Be present in the lab at least <strong>2 days per week</strong></span>
+                          <span>Be present in the lab <strong>two days per week</strong></span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span>Arrange in-person project check-ins</span>
+                          <span>Alternate arrangements must be discussed with <strong>Professor Mansouri</strong></span>
                         </li>
                       </ul>
                     </div>
@@ -234,9 +247,8 @@ export default function Onboarding() {
                   
                   <div className="p-4 rounded-lg border-l-4 border-chart-2 bg-chart-2/5">
                     <p className="text-sm">
-                      If you have classes, appointments, or other commitments 
-                      that conflict with lab time, communicate with your supervisor in advance. We're understanding 
-                      of academic schedules and personal needs.
+                      If you need to request alternate arrangements due to classes, appointments, or other commitments, 
+                      please discuss this directly with Professor Mansouri in advance.
                     </p>
                   </div>
                 </div>
@@ -253,7 +265,7 @@ export default function Onboarding() {
             </Card>
           )}
 
-          {/* Step 3: GitHub Repository */}
+          {/* Step 3: Codebase Maintenance */}
           {currentStep === 3 && (
             <Card className="border-0 bg-card/80 backdrop-blur-sm shadow-xl animate-in fade-in slide-in-from-right-4 duration-300">
               <CardContent className="p-8">
@@ -262,22 +274,23 @@ export default function Onboarding() {
                     <Github className="h-8 w-8 text-primary" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold">Maintaining Your GitHub Repository</h2>
-                    <p className="text-muted-foreground">Best practices for version control and collaboration</p>
+                    <h2 className="text-2xl font-bold">Codebase Maintenance</h2>
+                    <p className="text-muted-foreground">Keeping your GitHub repository up-to-date and tidy</p>
                   </div>
                 </div>
                 
                 <div className="space-y-6 text-foreground/90">
                   <p className="leading-relaxed">
-                    A clean, well-documented GitHub repository is essential for reproducible research and team collaboration. 
-                    Your code represents both your work and the lab's standards.
+                    We ask that each and every member maintains an <strong>up-to-date and tidy GitHub repository</strong>. 
+                    Not only is this a good and professional practice, but it allows us to keep up with your work 
+                    and have a good understanding of your progress.
                   </p>
                   
                   <div className="space-y-4">
                     <div className="p-5 rounded-xl bg-muted/50 border border-border">
                       <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
                         <span className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm">!</span>
-                        Critical Requirements
+                        Best Practices
                       </h3>
                       <div className="grid gap-3">
                         <div className="flex items-start gap-3">
@@ -330,7 +343,7 @@ export default function Onboarding() {
                   <div className="p-4 rounded-lg border-l-4 border-primary bg-primary/5">
                     <p className="text-sm font-medium">
                       All lab projects should be in the organization's GitHub. 
-                      Personal forks are fine for experimentation, but main development happens in shared repositories.
+                      This allows us to track your progress and maintain a consistent, professional organization codebase.
                     </p>
                   </div>
                 </div>
@@ -347,22 +360,103 @@ export default function Onboarding() {
             </Card>
           )}
 
-          {/* Step 4: Complete Setup */}
+          {/* Step 4: Writing As You Go */}
           {currentStep === 4 && (
+            <Card className="border-0 bg-card/80 backdrop-blur-sm shadow-xl animate-in fade-in slide-in-from-right-4 duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-xl bg-primary/10">
+                    <PenLine className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold">Writing As You Go</h2>
+                    <p className="text-muted-foreground">Translating technical progress into paper production</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-6 text-foreground/90">
+                  <p className="leading-relaxed">
+                    To ensure technical progress translates to paper production, we emphasize a 
+                    <strong> research-first approach</strong>. Planning your writing before diving into code 
+                    leads to more focused experiments and stronger publications.
+                  </p>
+                  
+                  <div className="grid gap-4">
+                    <div className="flex gap-4 p-4 rounded-lg bg-muted/50">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">1</div>
+                      <div>
+                        <h3 className="font-semibold mb-1">Develop Your Research Question</h3>
+                        <p className="text-sm text-muted-foreground">
+                          Before writing any code, develop a robust research question and potential answer. 
+                          This gives your experiments clear direction and purpose.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-4 p-4 rounded-lg bg-muted/50">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">2</div>
+                      <div>
+                        <h3 className="font-semibold mb-1">Draft Your Introduction First</h3>
+                        <p className="text-sm text-muted-foreground">
+                          Ideally, a draft of your Introduction should be completed <strong>before experiments begin</strong>. 
+                          This helps clarify your motivation, contributions, and expected outcomes.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-4 p-4 rounded-lg bg-muted/50">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">3</div>
+                      <div>
+                        <h3 className="font-semibold mb-1">Iterate and Refine</h3>
+                        <p className="text-sm text-muted-foreground">
+                          As you run experiments, continuously update your paper draft. 
+                          This ensures your writing stays aligned with your actual findings.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 rounded-lg border-l-4 border-primary bg-primary/5">
+                    <p className="text-sm font-medium">
+                      This approach may feel counterintuitive at first, but it leads to more impactful research 
+                      and significantly smoother paper writing when results are ready.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex justify-between mt-8">
+                  <Button variant="outline" onClick={prevStep} size="lg">
+                    <ChevronLeft className="mr-2 h-4 w-4" /> Back
+                  </Button>
+                  <Button onClick={nextStep} size="lg">
+                    Continue <ChevronRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Step 5: Getting Started (For New Members) */}
+          {currentStep === 5 && (
             <Card className="border-0 bg-card/80 backdrop-blur-sm shadow-xl animate-in fade-in slide-in-from-right-4 duration-300">
               <CardContent className="p-8">
                 <div className="text-center py-4">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
                     <UserCheck className="h-10 w-10 text-primary" />
                   </div>
-                  <h2 className="text-2xl font-bold mb-4">Almost There!</h2>
-                  <p className="text-muted-foreground max-w-md mx-auto mb-8">
-                    You've learned the essentials. Now complete a quick form so we can add you to 
-                    our GitHub organization and internal systems.
+                  <h2 className="text-2xl font-bold mb-4">Getting Started</h2>
+                  <p className="text-muted-foreground max-w-lg mx-auto mb-8">
+                    As a new member, you'll need to be set up on payroll, assigned to a project, 
+                    and added to the GitHub organization. If any of these haven't been addressed, 
+                    please reach out to us ASAP.
                   </p>
                   
                   <div className="p-6 rounded-xl bg-muted/50 border border-border max-w-md mx-auto mb-8">
-                    <h3 className="font-semibold mb-3">The form will ask for:</h3>
+                    <h3 className="font-semibold mb-3">Request GitHub Access</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Use the form below to request an invitation to the GitHub organization. 
+                      You'll need to provide:
+                    </p>
                     <ul className="text-sm text-left text-muted-foreground space-y-2">
                       <li className="flex items-center gap-2">
                         <CheckCircle2 className="h-4 w-4 text-primary" />
@@ -377,12 +471,12 @@ export default function Onboarding() {
 
                   <Button size="lg" asChild>
                     <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
-                      Complete Registration <ExternalLink className="ml-2 h-4 w-4" />
+                      Request GitHub Invitation <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
 
                   <p className="mt-6 text-sm text-muted-foreground max-w-md mx-auto">
-                    Once you're added, please take the time to read through the GitHub Organization's README for additional guidelines and resources.
+                    Once you're added, please take the time to carefully read through the GitHub Organization's README.
                   </p>
                 </div>
 
