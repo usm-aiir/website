@@ -1,18 +1,32 @@
 [
   {
-    "title": "MathMex",
+    "title": "MathMex Conversational Math Search Engine",
     "description": "MathMex is a conversational math search engine developed at USM, named after Vannevar Bush's hypothetical Memex system. Started in 2023 with MEIF funding and now supported by NSF, it's an open-source search engine for mathematical definitions from text, images, and videos. Users can search using text, formulas, or combined queries. Try it live at mathmex.com",
-    "duration": "2023-2026",
-    "team": ["Dr. Behrooz Mansouri", "Owen Leitzell", "Aubin Mugisha", "Nathaniel Serrano"],
     "githubUrl": "https://github.com/usm-aiir/mathmex",
     "paperUrl": "#"
   },
   {
-    "title": "Application of AI in the Fine Arts",
+    "title": "Scientific Text Simplification",
+    "description": "This project explores methods for automatically simplifying complex scientific literature to make research more accessible to broader audiences. By leveraging natural language processing techniques, we aim to preserve technical accuracy while reducing readability barriers for non-experts, students, and the general public.",
+    "githubUrl": "",
+    "paperUrl": ""
+  },
+  {
+    "title": "Legal Case Retrieval and Entailment",
+    "description": "This research focuses on developing information retrieval systems for legal documents, enabling efficient search and analysis of case law. The project also investigates textual entailment methods to determine logical relationships between legal statements, supporting tasks such as precedent identification and legal reasoning.",
+    "githubUrl": "",
+    "paperUrl": ""
+  },
+  {
+    "title": "Artwork Analysis with AI",
     "description": "Throughout history, art has served as a powerful mirror reflecting the evolving tapestry of human thought, emotions, and experiences. From abstract symbols to detailed narratives, artists have captured and reinterpreted concepts central to our understanding of the world. This research proposes a novel approach to explore this dynamic relationship by investigating how artistic portrayals of key concepts have changed across cultures and historical periods.",
-    "duration": "2025",
-    "team": ["Dr. Behrooz Mansouri", "Clayton Durepos"],
     "githubUrl": "",
     "paperUrl": "#"
+  },
+  {
+    "title": "Cloud Detection in Satellite Images",
+    "description": "This project develops machine learning models to accurately detect and segment clouds in satellite imagery. Reliable cloud detection is essential for remote sensing applications including weather forecasting, climate monitoring, and land cover analysis, where cloud interference can significantly impact data quality.",
+    "githubUrl": "",
+    "paperUrl": ""
   }
 ]
