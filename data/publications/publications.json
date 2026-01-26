@@ -1,12 +1,43 @@
 [
   {
+    "title": "MathMex-V2: A Large Language Model Enabled Math Search Engine",
+    "authors": ["C. Durepos", "I. McLaughlin", "C. Lund", "A. Sienbenmorgen", "N. Largey", "A. Pitcairn", "B. Mansouri"],
+    "venue": "JCDL",
+    "year": 2025,
+    "abstract": "This demonstration introduces MathMex-V2, a novel large language model (LLM) enabled math search engine aimed at addressing challenges in mathematical information retrieval through broader content coverage, enhanced retrieval capabilities, and an improved search interface. Features include a PDF reader, audio search, hybrid keyboard for text and formula entries, selective Retrieval Augmented Generation (RAG), query rewriting, and MMR-based diversification.",
+    "doi": "10.1109/JCDL67857.2025.00063"
+  },
+  {
+    "title": "From Speech to LaTeX: Large Language Models for Mathematical Accessibility in Digital Libraries",
+    "authors": ["A. Pitcairn", "C. Durepos", "N. Largey", "B. Mansouri"],
+    "venue": "JCDL",
+    "year": 2025,
+    "abstract": "This paper introduces a system for converting spoken mathematics into correctly formatted LaTeX, advancing accessibility and discoverability of mathematical content in digital libraries. The pipeline integrates automatic speech recognition (ASR) with large language models fine-tuned to identify and translate mathematical expressions into LaTeX syntax. Several LLMs are evaluated using multiple metrics including the LaTeX-specific TeXBLEU metric.",
+    "doi": "10.1109/JCDL67857.2025.00058"
+  },
+  {
+    "title": "Multimodal Emotion Classification in Artwork: A Comparative Study Across Modalities",
+    "authors": ["C. Durepos", "A. Pitcairn", "B. Mansouri"],
+    "venue": "JCDL",
+    "year": 2025,
+    "abstract": "This study compares unimodal and multimodal models for emotion classification in fine art, leveraging ArtEmis V2 and LLaVA-generated captions. Three models are studied: an image-only ViT classifier, a text-only BERT model using visual descriptions, and a custom multimodal model that fuses embeddings from both. Results indicate that multimodal input yields statistically significant improvements in emotion classification for fine art compared to unimodal approaches.",
+    "doi": "10.1109/JCDL67857.2025.00055"
+  },
+  {
+    "title": "MAT-VB: Mathematical Text-Vision Benchmark",
+    "authors": ["B. Mansouri", "A. Bell", "N. Largey", "A. Pitcairn"],
+    "venue": "JCDL",
+    "year": 2025,
+    "abstract": "This paper introduces the Mathematical Text-Vision Benchmark (MAT-VB) for evaluating mathematical image captioning and text-to-image retrieval. The benchmark contains 4,000 image-caption pairs from Wikipedia mathematical content, with two query formats for retrieval evaluation. Results show that fine-tuning significantly improves captioning performance, while retrieval effectiveness varies by model architecture.",
+    "doi": "10.1109/JCDL67857.2025.00050"
+  },
+  {
     "title": "Survey of Abstract Meaning Representation: Then, Now, Future",
     "authors": ["B. Mansouri"],
     "venue": "TBD",
     "year": 2025,
     "abstract": "This comprehensive survey examines the evolution of Abstract Meaning Representation (AMR) from its inception to current applications and future research directions in natural language processing and understanding.",
-    "doi": "#",
-    "pdfUrl": "#"
+    "doi": "#"
   },
   {
     "title": "Temporal Aspects of CLIP Embeddings",
@@ -14,8 +45,7 @@
     "venue": "Tempweb@WWW",
     "year": 2025,
     "abstract": "This work investigates the temporal characteristics of CLIP embeddings, analyzing how these multimodal representations capture and evolve over time-sensitive visual and textual content.",
-    "doi": "#",
-    "pdfUrl": "#"
+    "doi": "#"
   },
   {
     "title": "Analyzing the Influence of the Pandemic on Seasonal Queries",
@@ -23,8 +53,7 @@
     "venue": "Tempweb@WWW",
     "year": 2025,
     "abstract": "We analyze how the COVID-19 pandemic affected seasonal search query patterns, examining shifts in user behavior and information needs during this unprecedented global event.",
-    "doi": "#",
-    "pdfUrl": "#"
+    "doi": "#"
   },
   {
     "title": "Mathematical Information Retrieval: Search and Question Answering",
@@ -32,8 +61,7 @@
     "venue": "Foundations and Trends® in Information Retrieval",
     "year": 2025,
     "abstract": "This comprehensive survey examines the evolution of mathematical information retrieval from traditional symbolic approaches to modern neural methods. We analyze current challenges, datasets, evaluation metrics, and future research directions in the field of mathematical search and understanding.",
-    "doi": "#",
-    "pdfUrl": "#"
+    "doi": "#"
   },
   {
     "title": "AIIR Lab Systems for CLEF 2024 SimpleText: Large Language Models for Text Simplification",
@@ -41,8 +69,7 @@
     "venue": "CLEF",
     "year": 2024,
     "abstract": "This paper presents the AIIR Lab's systems for the CLEF 2024 SimpleText track, focusing on the use of large language models for automatic text simplification of scientific literature.",
-    "doi": "#",
-    "pdfUrl": "#"
+    "doi": "#"
   },
   {
     "title": "CrossMath: Towards Cross-lingual Math Information Retrieval",
@@ -50,8 +77,7 @@
     "venue": "ICTIR",
     "year": 2024,
     "abstract": "We present CrossMath, a system for cross-lingual mathematical information retrieval that enables users to search for mathematical content across different languages while preserving the semantic meaning of mathematical expressions.",
-    "doi": "#",
-    "pdfUrl": "#"
+    "doi": "#"
   },
   {
     "title": "Using Large Language Models for Math Information Retrieval",
@@ -59,8 +85,7 @@
     "venue": "SIGIR",
     "year": 2024,
     "abstract": "This work explores the application of large language models to mathematical information retrieval tasks, investigating how modern NLP techniques can improve the search and understanding of mathematical content.",
-    "doi": "#",
-    "pdfUrl": "#"
+    "doi": "#"
   },
   {
     "title": "MathMex: Search Engine for Math Definitions",
@@ -68,8 +93,7 @@
     "venue": "ECIR",
     "year": 2024,
     "abstract": "MathMex is a conversational math search engine developed at the University of Southern Maine. Named after Vannevar Bush's hypothetical Memex system, it provides an open-source platform for searching mathematical definitions extracted from various data sources including text, images, and videos. The system supports text, formula, and combined queries with advanced logging features.",
-    "doi": "10.1007/978-3-031-56027-9_15",
-    "pdfUrl": "https://link.springer.com/chapter/10.1007/978-3-031-56027-9_15"
+    "doi": "10.1007/978-3-031-56027-9_15"
   },
   {
     "title": "AIIR and LIAAD Labs Systems for CLEF 2023 SimpleText",
@@ -77,8 +101,7 @@
     "venue": "CLEF",
     "year": 2023,
     "abstract": "This paper presents the systems developed by AIIR and LIAAD labs for the CLEF 2023 SimpleText track, focusing on text simplification and automatic summarization for scientific literature.",
-    "doi": "#",
-    "pdfUrl": "#"
+    "doi": "#"
   },
   {
     "title": "FALQU: Finding Answers to Legal Questions",
@@ -86,8 +109,7 @@
     "venue": "arXiv",
     "year": 2023,
     "abstract": "FALQU is a system designed for finding answers to legal questions by leveraging advanced information retrieval and natural language processing techniques to search through legal document collections.",
-    "doi": "10.48550/arXiv.2304.05611",
-    "pdfUrl": "https://arxiv.org/abs/2304.05611"
+    "doi": "10.48550/arXiv.2304.05611"
   },
   {
     "title": "Towards Timeline Generation with Abstract Meaning Representation",
@@ -95,8 +117,7 @@
     "venue": "WWW",
     "year": 2023,
     "abstract": "We propose a novel approach for timeline generation using Abstract Meaning Representation (AMR) to better capture semantic relationships in temporal event sequences and improve the quality of automatically generated timelines.",
-    "doi": "#",
-    "pdfUrl": "#"
+    "doi": "#"
   },
   {
     "title": "Clarifying Questions in Math Information Retrieval",
@@ -104,7 +125,6 @@
     "venue": "ICTIR",
     "year": 2023,
     "abstract": "This work investigates the problem of query disambiguation in mathematical search engines through the use of clarifying questions. Our study analyzes user search patterns and proposes methods for better understanding and clarifying ambiguous mathematical queries.",
-    "doi": "#",
-    "pdfUrl": "#"
+    "doi": "#"
   }
 ]
