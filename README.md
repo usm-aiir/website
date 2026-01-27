@@ -8,6 +8,8 @@ If you've just joined the lab, you'll need to add yourself to our current-studen
 
 In addition, we ask that you upload an image of yourself to `public/images/students`. Please use the naming convention `firstnameLastname.jpg` for your image file, and include this image path in your JSON object.
 
+If you would rather not have a picture on the website, put the reference to your picture as `placeholder.jpg`.
+
 ### For the director
 When updating the website, simply clone the repository from the Lab's GitHub organization. After doing so, run the following in the root directory...
 
