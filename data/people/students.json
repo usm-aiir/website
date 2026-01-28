@@ -13,7 +13,8 @@
     "year": "3rd Year",
     "image": "/images/students/claytonDurepos.jpg",
     "email": "clayton.durepos@maine.edu",
-    "bio": "Clayton is a junior at USM majoring in Computer Science. He joined the AIIR lab in the Spring of 2025, conducting research on sentiment classification in the domain of fine arts. Since then, he has served as a full-stack developer for MathMex, and is now coordinating the research efforts of the lab."  },
+    "bio": "Clayton is a junior at USM majoring in Computer Science. He joined the AIIR lab in the Spring of 2025, conducting research on sentiment classification in the domain of fine arts. Since then, he has served as a full-stack developer for MathMex, and is now coordinating the research efforts of the lab."
+  },
   {
     "name": "Nathaniel Serrano",
     "level": "Undergraduate Student",
@@ -61,5 +62,13 @@
     "image": "/images/students/ellisFitzgerald.jpg",
     "email": "ellis.fitzgerald@maine.edu",
     "bio": "Ellis is a senior at USM majoring in Computer Science. He joined the AIIR lab in the Spring of 2026, conducting research on law document retrieval, and backend development work for MathMex's chatbot integration."
+  },
+  {
+    "name": "Courtney Jackson",
+    "level": "Undergraduate Student",
+    "year": "4th Year",
+    "image": "/images/students/courtneyJackson.jpg",
+    "email": "courtney.jackson@maine.edu",
+    "bio": "Courtney is a senior at USM majoring in Computer Science. She joined the AIIR lab in the Spring of 2026, conducting research on brain activity during information-seeking behaviors using EEG devices"
   }
 ]
