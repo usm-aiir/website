@@ -70,5 +70,13 @@
     "image": "/images/students/courtneyJackson.jpg",
     "email": "courtney.jackson@maine.edu",
     "bio": "Courtney is a senior at USM majoring in Computer Science. She joined the AIIR lab in the Spring of 2026, conducting research on brain activity during information-seeking behaviors using EEG devices"
+  },
+  {
+    "name": "Kristina Zbinden",
+    "level": "Undergraduate Student",
+    "year": "4th Year",
+    "image": "/images/students/kristinazbinden.jpg",
+    "email": "kristina.zbinden@maine.edu",
+    "bio": "Kristina is a senior at USM majoring in Computer Science. She joined the AIIR lab in the Spring of 2026, and is conducting research on natural language processing and satellite cloud detection algorithms."
   }
 ]
