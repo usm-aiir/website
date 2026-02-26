@@ -45,10 +45,19 @@ export interface Project {
   title: string;
   description: string;
   funding?: string;
-  duration: string;
-  team: string[];
+  duration?: string;
+  team?: string[];
   githubUrl?: string;
   paperUrl?: string;
+}
+
+export interface Product {
+  title: string;
+  description: string;
+  features: string[];
+  githubUrl?: string;
+  demoUrl?: string;
+  docsUrl?: string;
 }
 
 export interface ResearchArea {

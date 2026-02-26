@@ -2,8 +2,7 @@ import { Header } from "@/components/header"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Calendar, Users } from "lucide-react"
-import { Link } from "react-router-dom"
+import { ExternalLink, Github } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { loadCurrentProjects } from "@/lib/utils"
 
@@ -14,65 +13,57 @@ export default function Projects() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <div className="pt-24 pb-16 mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-16">
+      {/* Hero Section */}
+      <section className="relative mt-16 pt-20 pb-12 overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-50"></div>
+        <div className="absolute inset-0 hero-glow"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Research Projects</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
               Explore our cutting-edge research initiatives that push the boundaries of artificial intelligence and
               information retrieval
             </p>
           </div>
+        </div>
+      </section>
 
+      <div className="pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Current Projects */}
-          <section className="mb-20">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold">Current Projects</h2>
-              <Badge variant="secondary" className="text-sm">
+          <section className="pt-12">
+            <div className="flex items-center justify-between mb-10">
+              <h2 className="text-3xl font-bold section-accent-left">Current Projects</h2>
+              <Badge variant="secondary" className="text-sm px-4 py-1">
                 {currentProjects.length} Active
               </Badge>
             </div>
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-8 mt-6">
               {currentProjects.map((project, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                <Card key={index} className="card-lift group">
                   <CardHeader>
-                    <div className="flex items-start justify-between mb-2">
-                      <CardTitle className="text-xl text-balance">{project.title}</CardTitle>
-                    </div>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        {project.duration}
-                      </div>
-                    </div>
+                    <CardTitle className="text-xl text-balance group-hover:text-primary transition-colors">{project.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
 
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="font-medium text-sm mb-2">Team Members</h4>
-                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                          <Users className="h-4 w-4" />
-                          <span>{project.team.join(", ")}</span>
-                        </div>
-                      </div>
-
-                      <div className="flex gap-2 pt-2">
+                    <div className="flex gap-2">
+                      {project.githubUrl && (
                         <Button size="sm" variant="outline" asChild>
-                          <Link to={project.githubUrl || "#"}>
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                             <Github className="h-4 w-4 mr-2" />
                             Code
-                          </Link>
+                          </a>
                         </Button>
+                      )}
+                      {project.paperUrl && project.paperUrl !== "#" && (
                         <Button size="sm" variant="outline" asChild>
-                          <Link to={project.paperUrl || "#"}>
+                          <a href={project.paperUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="h-4 w-4 mr-2" />
                             Papers
-                          </Link>
+                          </a>
                         </Button>
-                      </div>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

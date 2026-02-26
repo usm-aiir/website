@@ -2,10 +2,10 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { Mail, GraduationCap } from "lucide-react"
 import { Link } from "react-router-dom"
 import { loadDirector, loadCurrentStudents, loadAlumni } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 
 export default function People() {
   const director = loadDirector()
@@ -16,20 +16,27 @@ export default function People() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <div className="pt-24 pb-16 mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-16">
+      {/* Hero Section */}
+      <section className="relative mt-16 pt-20 pb-12 overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-50"></div>
+        <div className="absolute inset-0 hero-glow"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Team</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
               Meet the brilliant minds conducting research and producing results for our lab
             </p>
           </div>
+        </div>
+      </section>
+
+      <div className="pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Director Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-8 text-center">Lab Director</h2>
-            <Card className="max-w-4xl mx-auto">
+          <section className="mb-20 pt-12 text-center">
+            <h2 className="text-3xl font-bold mb-10 section-accent-center">Lab Director</h2>
+            <Card className="max-w-4xl mx-auto gradient-border">
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-3 gap-8 items-start">
                   <div className="text-center">
@@ -69,11 +76,11 @@ export default function People() {
           </section>
 
           {/* Current Students */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-8 text-center">Current Students</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <section className="mb-20 text-center">
+            <h2 className="text-3xl font-bold mb-10 section-accent-center">Current Students</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
               {currentStudents.map((student, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                <Card key={index} className="card-lift group">
                   <CardContent className="p-6">
                     <div className="text-center mb-4">
                       <img
@@ -109,11 +116,11 @@ export default function People() {
           </section>
 
           {/* Alumni */}
-          <section>
-            <h2 className="text-3xl font-bold mb-8 text-center">Alumni</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+          <section className="text-center">
+            <h2 className="text-3xl font-bold mb-10 section-accent-center">Alumni</h2>
+            <div className="grid md:grid-cols-2 gap-6 mt-6">
               {alumni.map((alum, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                <Card key={index} className="card-lift">
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between">
                       <div>

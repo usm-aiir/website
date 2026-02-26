@@ -1,12 +1,13 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { Director, Student, Alumni, Publication, Project, ResearchArea, NewsItem } from '@/types';
+import { Director, Student, Alumni, Publication, Project, Product, ResearchArea, NewsItem } from '@/types';
 import directorData from '../../data/people/director.json';
 import currentStudentsData from '../../data/people/students.json';
 import alumniData from '../../data/people/alumni.json';
 import publicationsData from '../../data/publications/publications.json';
 import currentProjectsData from '../../data/projects/current.json';
 import completedProjectsData from '../../data/projects/completed.json';
+import productsData from '../../data/products/products.json';
 import researchAreasData from '../../data/home/focus.json';
 import recentNewsData from '../../data/home/news.json';
 
@@ -26,6 +27,8 @@ export const loadPublications = (): Publication[] => publicationsData as Publica
 export const loadCurrentProjects = (): Project[] => currentProjectsData as Project[];
 
 export const loadCompletedProjects = (): Project[] => completedProjectsData as Project[];
+
+export const loadProducts = (): Product[] => productsData as Product[];
 
 export const loadResearchAreas = (): ResearchArea[] => researchAreasData as ResearchArea[];
 

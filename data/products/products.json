@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Semantic Search",
+    "description": "A powerful, self-hosted semantic search application. Upload your data files and search.",
+    "features": [
+      "Hybrid Search with BM25 & vector embeddings",
+      "RAG Chat powered by local Ollama models",
+      "Support for CSV, TSV, JSON, and JSONL file formats",
+      "Background indexing for large file uploads",
+      "Fully self-hosted with Docker"
+    ],
+    "githubUrl": "https://github.com/usm-aiir/docker-semantic-search",
+    "docsUrl": ""
+  }
+]

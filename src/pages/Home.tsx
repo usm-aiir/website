@@ -29,22 +29,24 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative mt-10 pt-24 pb-16 overflow-hidden">
-	<div className="absolute inset-0 grid-pattern"></div>
+        <div className="absolute inset-0 grid-pattern opacity-60"></div>
         <div className="absolute inset-0 hero-glow"></div>
+        <div className="decoration-dots top-20 -left-20 rotate-12"></div>
+        <div className="decoration-dots bottom-10 -right-20 -rotate-12"></div>
         <div className="max-w-7xl my-20 mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-6xl mx-auto">
             <h1 className="text-2xl md:text-4xl font-bold mb-6 text-balance">
               The <span className="gradient-text">Artificial Intelligence</span> and <span className="gradient-text">Information Retrieval</span> Laboratory
             </h1>
-	    <h1 className="text-2xl md:text-3xl font-bold mb-6 text-balance">
-		at the University of Southern Maine
-	    </h1>
-            <p className="text-xl text-muted-foreground mb-8 text-pretty max-w-3xl mx-auto leading-relaxed">
-              Maine's first Information Retrieval Laboratory, pioneering AI research and innovative solutions 
-              at the University of Southern Maine.
+            <h2 className="text-xl md:text-2xl font-medium text-muted-foreground mb-6 text-balance">
+              at the University of Southern Maine
+            </h2>
+            <p className="text-lg text-muted-foreground mb-10 text-pretty max-w-2xl mx-auto leading-relaxed">
+              Pioneering AI research and innovative solutions in information retrieval, 
+              natural language processing, and machine learning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
+              <Button size="lg" className="btn-glow" asChild>
                 <Link to="/projects">
                   Explore Our Research <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -58,11 +60,12 @@ export default function Home() {
       </section>
 
       {/* Research Areas */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Research Focus Areas</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+      <section className="py-20 bg-muted/30 relative overflow-hidden">
+        <div className="decoration-dots top-10 right-10 opacity-10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl font-bold mb-4 section-accent-center">Research Focus Areas</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto mt-6">
               Our interdisciplinary approach combines theoretical foundations with practical applications
             </p>
           </div>
@@ -70,10 +73,12 @@ export default function Home() {
             {researchAreas.map((area, index) => (
               <Card
                 key={index}
-                className="border-0 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300"
+                className="border-0 bg-card/50 backdrop-blur-sm card-lift"
               >
-                <CardContent className="p-6">
-                  <area.icon className="h-12 w-12 text-primary mb-4" />
+                <CardContent className="p-8">
+                  <div className="icon-gradient w-14 h-14 rounded-xl flex items-center justify-center mb-5">
+                    <area.icon className="h-7 w-7 text-primary" />
+                  </div>
                   <h3 className="text-xl font-semibold mb-3">{area.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{area.description}</p>
                 </CardContent>
@@ -84,25 +89,23 @@ export default function Home() {
       </section>
 
       {/* Recent News */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Recent News</h2>
-              <p className="text-muted-foreground text-lg">
-                Stay updated with our latest achievements and developments
-              </p>
-            </div>
+          <div className="text-center mb-14">
+            <h2 className="text-3xl font-bold mb-4 section-accent-center">Recent News</h2>
+            <p className="text-muted-foreground text-lg mt-6">
+              Stay updated with our latest achievements and developments
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {recentNews.map((news, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="card-lift group">
                 <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <Badge variant="secondary">{news.badge}</Badge>
+                  <div className="flex items-center justify-between mb-4">
+                    <Badge variant="secondary" className="group-hover:bg-primary/10 transition-colors">{news.badge}</Badge>
                     <span className="text-sm text-muted-foreground">{news.date}</span>
                   </div>
-                  <h3 className="font-semibold mb-2 text-balance">{news.title}</h3>
+                  <h3 className="font-semibold mb-2 text-balance group-hover:text-primary transition-colors">{news.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{news.description}</p>
                 </CardContent>
               </Card>
@@ -112,24 +115,25 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-primary/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-30"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">5+</div>
-              <div className="text-muted-foreground">Active Projects</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">5+</div>
+              <div className="text-muted-foreground font-medium">Active Projects</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">13+</div>
-              <div className="text-muted-foreground">Publications</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">16+</div>
+              <div className="text-muted-foreground font-medium">Publications</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">7</div>
-              <div className="text-muted-foreground">Team Members</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">7</div>
+              <div className="text-muted-foreground font-medium">Team Members</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">2+</div>
-              <div className="text-muted-foreground">Years of Research</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">2+</div>
+              <div className="text-muted-foreground font-medium">Years of Research</div>
             </div>
           </div>
         </div>
