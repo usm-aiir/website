@@ -93,5 +93,12 @@
     "year": "3rd Year",
     "image": "/images/students/aislinDavis.jpg",
     "bio": "Aislin is a junior at USM majoring in Computer Science, with a minor in AI Driven Computational Linguistics. She joined the AIIR Lab in the Summer of 2026, conducting research on detecting ambiguity in a mathematical context."
+  },
+  {
+    "name": "Kyle Rich",
+    "level": "Undergraduate Student",
+    "year": "3rd Year",
+    "image": "/images/students/placeholder.jpg",
+    "bio": "Kyle is a junior at USM double majoring in Information Technology and Cybersecurity, with a minor in Computer Science. He joined the AIIR Lab in the Fall of 2026."
   }
 ]
